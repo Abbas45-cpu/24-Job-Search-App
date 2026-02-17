@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>JobSearch Pro</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body data-page="list">
+		<header class="site-header">
+			<div class="brand">
+				<div class="brand-mark">JS</div>
+				<div>
+					<p class="brand-title">JobSearch Pro</p>
+					<p class="brand-sub">Find work that fits your life</p>
+				</div>
+			</div>
+			<nav class="nav-links">
+				<a href="index.html" class="active">Jobs</a>
+				<a href="saved.html">Saved</a>
+			</nav>
+			<div class="header-actions">
+				<button class="theme-toggle" id="themeToggle" type="button">
+					<span class="toggle-label">Theme</span>
+					<span class="toggle-dot"></span>
+				</button>
+			</div>
+		</header>
+
+		<main class="layout">
+			<aside class="filters" aria-label="Job filters">
+				<div class="filters-header">
+					<h2>Filter Jobs</h2>
+					<button id="clearFilters" class="ghost-btn" type="button">Clear</button>
+				</div>
+				<form id="filtersForm">
+					<label>
+						Location
+						<select id="locationFilter">
+							<option value="all">All locations</option>
+						</select>
+					</label>
+					<label>
+						Job type
+						<select id="typeFilter">
+							<option value="all">All types</option>
+							<option value="Full-time">Full-time</option>
+							<option value="Part-time">Part-time</option>
+							<option value="Contract">Contract</option>
+							<option value="Remote">Remote</option>
+						</select>
+					</label>
+					<label>
+						Experience
+						<select id="levelFilter">
+							<option value="all">All levels</option>
+							<option value="Entry">Entry</option>
+							<option value="Mid">Mid</option>
+							<option value="Senior">Senior</option>
+							<option value="Lead">Lead</option>
+						</select>
+					</label>
+					<div class="salary-group">
+						<label>
+							Salary min
+							<input id="salaryMin" type="number" placeholder="50000" />
+						</label>
+						<label>
+							Salary max
+							<input id="salaryMax" type="number" placeholder="180000" />
+						</label>
+					</div>
+				</form>
+			</aside>
+
+			<section class="results">
+				<div class="search-bar" id="searchBar">
+					<div class="search-input">
+						<input
+							id="searchInput"
+							type="text"
+							placeholder="Search by title, company, or keyword"
+						/>
+					</div>
+					<div class="search-meta">
+						<div class="job-count" id="jobCount">0 jobs</div>
+						<div class="sort-control">
+							<label for="sortSelect">Sort by</label>
+							<select id="sortSelect">
+								<option value="latest">Latest</option>
+								<option value="salary">Salary</option>
+								<option value="relevance">Relevance</option>
+							</select>
+						</div>
+					</div>
+				</div>
+
+				<div class="status-row">
+					<p class="status-text" id="statusText">Showing recommended roles for you.</p>
+					<div class="stats">
+						<div>
+							<span class="stat-label">Total</span>
+							<span class="stat-value" id="totalCount">0</span>
+						</div>
+						<div>
+							<span class="stat-label">Saved</span>
+							<span class="stat-value" id="savedCount">0</span>
+						</div>
+					</div>
+				</div>
+
+				<div id="jobsGrid" class="jobs-grid"></div>
+				<div id="emptyState" class="empty-state hidden">
+					<h3>No jobs match your filters</h3>
+					<p>Try adjusting filters or clearing your search.</p>
+				</div>
+			</section>
+		</main>
+
+		<button id="scrollTop" class="scroll-top" type="button" aria-label="Scroll to top">
+			Top
+		</button>
+
+		<script src="script.js"></script>
+	</body>
+</html>

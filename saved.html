@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Saved Jobs | JobSearch Pro</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="saved">
+    <header class="site-header">
+      <div class="brand">
+        <div class="brand-mark">JS</div>
+        <div>
+          <p class="brand-title">JobSearch Pro</p>
+          <p class="brand-sub">Your saved opportunities</p>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Jobs</a>
+        <a href="saved.html" class="active">Saved</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" id="themeToggle" type="button">
+          <span class="toggle-label">Theme</span>
+          <span class="toggle-dot"></span>
+        </button>
+      </div>
+    </header>
+
+    <main class="details-layout">
+      <div class="details-card">
+        <div class="saved-header">
+          <div>
+            <h2>Saved Jobs</h2>
+            <p class="status-text">Roles you marked for later.</p>
+          </div>
+          <div>
+            <span class="stat-label">Saved</span>
+            <span class="stat-value" id="savedTotal">0</span>
+          </div>
+        </div>
+        <div id="savedList" class="saved-list"></div>
+        <div id="savedEmpty" class="empty-state hidden">
+          <h3>No saved jobs yet</h3>
+          <p>Save interesting roles to view them here.</p>
+          <a class="primary-btn" href="index.html">Browse jobs</a>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
